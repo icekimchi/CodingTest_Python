@@ -14,22 +14,16 @@ def solution(park, routes):
         distance = int(distance)
         
         test = list(start)
-        print("시작 test : ", test)
         for i in range(distance):
             test[0] = test[0] + op[dir][0]
             test[1] = test[1] + op[dir][1]
-            print(i,"번째 test : ", test)
-            print(start)
             
             if test[0]>=H or test[0]<0 or test[1]<0 or test[1]>=W:
                 break
             elif park[test[0]][test[1]] == "X":
-                print("X만남")
                 break
             elif i==distance-1:
                 start = test
-                print("움직임", start)
-
                 
     return start
             
