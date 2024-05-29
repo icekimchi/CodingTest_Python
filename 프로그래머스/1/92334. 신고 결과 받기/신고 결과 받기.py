@@ -1,6 +1,6 @@
 def solution(id_list, report, k):
-    report_result = {}
-    result = {}
+    report_result = {id: [] for id in id_list} # 해당 유저를 신고한 ID
+    result = {id: 0 for id in id_list}
     
     #초기값 대입
     for id in id_list:
